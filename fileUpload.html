@@ -1,0 +1,122 @@
+<html>
+
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body class="bg-light"> 
+
+<div > 
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Nissan-logo.svg/512px-Nissan-logo.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Japanese Language Translation Tool
+    </a>
+  </nav>
+  
+    
+
+  <div class="card  mb-5 p-2 text-secondary">
+    <div class=" bg-white text-center ">
+        <h4>Upload file to Translate</h4>
+    </div>
+    <div class="card-body p-5 " >
+        <form>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile "/>
+                <label class="custom-file-label" for="customFile">Choose file</label>
+
+            </div>
+        </form>
+     
+    </div>
+    <div class="text-center mb-2">
+        <button class="btn btn-primary ">Upload</button>
+    
+    </div>
+
+
+</div>
+    <div class=" align-items-center mb-5">
+        <div class="card ">
+            <div class="mt-2 bg-white text-center text-secondary">
+                <h4>Enter Sentence to Translate</h4>
+
+            </div>
+            <div class="card-body">
+            <div class="row mb-5">
+                <div class="col-sm">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-white">
+                            <h6 class="m-0">Japanese</h6>
+
+                        </div>
+                        <div class="card-body p-0 ">
+                            <form class="m-0 p-0 b-0 border-0">
+                                <div class="form-group mb-0 border-0 p-2">
+                                    <textarea class="form-control p-0 m-0 border-0" id="exampleFormControlTextarea1"
+                                        rows="5"></textarea>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-sm">
+                    <div class="card shadow-sm ">
+                        <div class="card-header  bg-white">
+                            <h6 class="m-0"> English</h6>
+
+                        </div>
+                        <div class="card-body p-0">
+                            <form class="m-0 p-0 b-0">
+                                <div class="form-group mb-0 p-2">
+                                    <textarea class="form-control p-0 m-0 border-0" id="exampleFormControlTextarea1"
+                                        rows="5" placeholder="Translation"></textarea>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="">
+                <button class="btn btn-primary btn-block"> Translate</button>
+            </div>
+        </div>
+
+        </div>
+
+
+  
+
+    </div>
+
+
+</body>
+
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
+
+</html>
